@@ -11,7 +11,7 @@ const tasks = ref<Task[]>([
   { name: '有機化学の課題', status: '完了済み' }
 ])
 const newTaskName = ref('')
-const newTaskStatus = ref('')
+const newTaskStatus = ref('未完了')
 
 const addTask = () => {
   tasks.value.push({ name: newTaskName.value, status: newTaskStatus.value })
@@ -43,11 +43,7 @@ const addTask = () => {
         タスク
         <input v-model="newTaskName" type="text" />
       </label>
-      <label>
-        状態
-        <input v-model="newTaskStatus" type="text" />
-      </label>
-      <button v-if="newTaskName!=''" @click="addTask(); newTaskName=''; newTaskStatus=''">追加</button>
+      <button v-if="newTaskName!=''" @click="addTask(); newTaskName=''">追加</button>
       <button v-else>追加</button>
     </div>
   </div>
