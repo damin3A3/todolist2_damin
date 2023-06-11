@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import TodoList from './TodoList.vue'
 
-defineProps<{
+/** defineProps<{
   msg: string
-}>()
+}>() */
 </script>
 
 <template>
   <div>
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
     <TodoList />
   </div>
 </template>
